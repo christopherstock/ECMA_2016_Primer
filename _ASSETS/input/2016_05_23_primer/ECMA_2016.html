@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>ECMA 2016 Primer Script</title>
+        <meta charset="utf-8">
+
+        <script type="text/javascript">
+
+            // ####################################################################################################
+
+            console.log( "JavaScript ECMA 2016" );
+
+            class Chrisy
+            {
+                //var test = "7";
+                //static myProp = 'bar';
+
+                constructor( age )
+                {
+                    console.log( "Constructor being invoked." );
+
+                    this.name = "Chrisy";
+                    this.age  = age;
+
+                    console.log( "my name is [" + this.name + "]" );
+                }
+
+                showAge()
+                {
+                    console.log( "my age  is [" + this.age  + "]" );
+
+                    var array = [ 1, 3, 5, 7 ];
+
+                    //'i' references to the values of the array indexes
+                    for ( var i of array )
+                    {
+                         console.log( i );
+                    }
+                }
+
+                static staticFunction()
+                {
+                    console.log( "invoking static function" );
+                }
+            }
+
+            var chrisy = new Chrisy( 36 );
+            chrisy.showAge();
+            Chrisy.staticFunction();
+
+            // ####################################################################################################
+
+        </script>
+    </head>
+
+    <body>
+    </body>
+
+</html>
